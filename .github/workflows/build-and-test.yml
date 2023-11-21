@@ -13,3 +13,4 @@ jobs:
         with:
           java-version: 8
       - run: mvn -f pom.xml test
+      
