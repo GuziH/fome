@@ -19,3 +19,4 @@ jobs:
       with:
         name: artifact
         path: ./target/spring-github-actions-demo-0.1.jar
+        
