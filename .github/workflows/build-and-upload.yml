@@ -1,23 +1,23 @@
-name: Build and upload binary artifact
+name: Build
 
 on: push
 
 jobs:
   release:
     runs-on: ubuntu-latest
-    name: Build, package and upload .jar artifact
+    name: Build + upload do .jar
     steps:
     - uses: actions/checkout@v1
-    - name: Set up JDK 8
+    - name: JDK 8
       uses: actions/setup-java@v1
       with:
         java-version: 8
-    - name: Build and package project
+    - name: Builda o pacote maven
       run: mvn -f pom.xml package
-    - name: Upload Maven build artifact
+    - name: Upload do .jar gerado (artefato)
       uses: actions/upload-artifact@v1
       with:
-        name: artifact
+        name: .jar gerado (artefato)
         path: ./target/spring-github-actions-demo-0.1.jar
 
 
